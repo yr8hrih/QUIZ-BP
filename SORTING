@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Abjad {
+    public static void main(String[] args) {
+        Scanner s = new Scanner (System.in);
+        String data[] = new String[5];
+        System.out.println("Selection Sort");
+        System.out.println("Masukkan Data Awal");
+        for (int i=0; i<5; i++) {
+            System.out.println("Data "+(i+1)+"=");
+            data[i]=s.next();
+        }
+        System.out.println("Data Awal: ");
+        for (int i=0; i<data.length; i++) {
+            System.out.println(data[i]+"");
+        }
+        System.out.println(" ");
+        for (int i=0; i<data.length; i++){
+            for (int j=i+1; j<data.length; j++){
+                if(data[i].compareToIgnoreCase(data[j])>0){
+                    String temp = data[j];
+                    data[j] = data[i];
+                    data[i] = temp;
+                }
+            }
+        }
+        System.out.print("Data Akhir: ");
+        for(int i=0; i<data.length; i++){
+            System.out.print(data[i]+" ");
+        }
+        System.out.println("");
+    }
+    
+}
