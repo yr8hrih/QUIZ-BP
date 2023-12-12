@@ -1,0 +1,49 @@
+import java.util.Scanner;
+public class no3 {
+     public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int tas [][]= new int [2][2];
+        int baju [][]= new int [2][2];
+        int jas [][]=new int [2][2];
+        
+        int total [][]= new int [2][2];
+        System.out.println("Program Menghitung Total Harga Baju , Tas dan Jas");
+        System.out.println("Masukkan  4 Total harga tas : ");
+        for (int i = 0; i<2; i++){
+            for (int j = 0; j<2; j++){
+                System.out.print("["+i+","+j+"]= ");
+                tas[i][j] = s.nextInt();
+            }
+        }
+        System.out.println("Masukkan  4 Total harga baju ");
+        for (int i=0; i<2; i++){
+            for (int j=0; j<2; j++){
+                System.out.print("["+i+","+j+"]= ");
+                baju[i][j]= s.nextInt();
+            }
+        }
+        System.out.println("Masukkan  4 Total harga jas ");
+        for (int i=0; i<2; i++){
+            for (int j=0; j<2; j++){
+                System.out.print("["+i+","+j+"]= ");
+                jas[i][j]= s.nextInt();
+            }
+        }
+        for (int i=0; i<2;i++){
+            for (int j=0;j<2;j++){
+                total[i][j]= tas[i][j]+baju[i][j]+jas[i][j];
+            }
+        }
+        System.out.println("Total harga : ");
+        System.out.println("a b"+"a = tas   b = baju");
+        System.out.println("c d"+"c = minggu ke-3   e = minggu ke-4");
+        
+        for (int i=0;i<2;i++){
+            for (int j=0; j<2; j++){
+                System.out.print(total[i][j]+"\t    ");
+            }
+            System.out.println(" ");
+            }  
+    
+     }
+}
